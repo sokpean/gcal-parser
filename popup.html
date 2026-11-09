@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Add to Google Calendar</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <label class="field">
+      <span>Paste or highlight text</span>
+      <textarea id="text" rows="3" placeholder="e.g. Coffee with Priya Thursday 10:30am at Blue Bottle"></textarea>
+    </label>
+
+    <section id="form">
+      <label class="field">
+        <span>Title</span>
+        <input id="title" type="text">
+      </label>
+
+      <div class="row">
+        <label class="field grow">
+          <span>Date</span>
+          <input id="date" type="date">
+        </label>
+        <label class="check">
+          <input id="allday" type="checkbox"> All day
+        </label>
+      </div>
+
+      <div class="row" id="times">
+        <label class="field grow"><span>Start</span><input id="start" type="time"></label>
+        <label class="field grow"><span>End</span><input id="end" type="time"></label>
+      </div>
+
+      <label class="field">
+        <span>Location</span>
+        <input id="location" type="text">
+      </label>
+
+      <label class="field">
+        <span>Details</span>
+        <textarea id="details" rows="2"></textarea>
+      </label>
+
+      <p id="hint" class="hint" hidden>No date found — using today. Adjust if needed.</p>
+    </section>
+
+    <button id="go" type="button">Open in Google Calendar</button>
+    <p class="foot">Opens a pre-filled event. Nothing is saved until you click Save there. <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>Enter</kbd></p>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
